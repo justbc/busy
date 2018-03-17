@@ -11,7 +11,7 @@ import requiresLogin from '../auth/requiresLogin';
 const Performance = ({ intl }) => (
   <div className="shifted">
     <Helmet>
-      <title>{intl.formatMessage({ id: 'wallet', defaultMessage: 'Performance' })} - Busy</title>
+      <title>{intl.formatMessage({ id: 'performance', defaultMessage: 'Performance' })} - Busy</title>
     </Helmet>
     <div className="feed-layout container">
       <Affix className="leftContainer" stickPosition={77}>
@@ -31,7 +31,7 @@ const Performance = ({ intl }) => (
   </div>
 );
 
-Wallet.propTypes = {
+Performance.propTypes = {
   intl: PropTypes.shape().isRequired,
 };
 
