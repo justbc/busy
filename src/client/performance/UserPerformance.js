@@ -29,6 +29,8 @@ import Loading from '../components/Icon/Loading';
 
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 
+import React, {Component} from 'react';
+
 @withRouter
 @connect(
   (state, ownProps) => ({
