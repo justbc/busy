@@ -164,12 +164,6 @@ class UserPerformance extends React.Component {
   <XAxis />
   <YAxis />
 </XYPlot>
-      </br>
-      
-      <RadialChart
-  data={[{angle: 1}, {angle: 5}, {angle: 2}]}
-  width={300}
-  height={300} /> 
 
     );
   }
