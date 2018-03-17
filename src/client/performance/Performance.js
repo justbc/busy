@@ -21,7 +21,7 @@ const Performance = ({ intl }) => (
       </Affix>
       <Affix className="rightContainer" stickPosition={77}>
         <div className="right">
-          <WalletSidebar isCurrentUser />
+          <RightSidebar />
         </div>
       </Affix>
       <div className="center">
