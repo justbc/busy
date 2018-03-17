@@ -134,7 +134,6 @@ class UserPerformance extends React.Component {
     const actions = usersAccountHistory[user.name] || [];
 
     return (
-      <h3> User Performance </h3>
       <XYPlot
   width={300}
   height={300}>
