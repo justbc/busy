@@ -109,6 +109,17 @@ class UserMenu extends React.Component {
               >
                 <FormattedMessage id="activity" defaultMessage="Activity" />
               </li>
+
+              <li
+                className={this.getItemClasses('performance')}
+                onClick={this.handleClick}
+                role="presentation"
+                data-key="performance"
+              >
+                <FormattedMessage id="performance" defaultMessage="Performance" />
+              </li>
+
+
             </ul>
           </Scrollbars>
         </div>
