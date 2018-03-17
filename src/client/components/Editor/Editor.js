@@ -15,6 +15,8 @@ import withEditor from './withEditor';
 import EditorInput from './EditorInput';
 import Body, { remarkable } from '../Story/Body';
 
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+
 import './Editor.less';
 
 @injectIntl
