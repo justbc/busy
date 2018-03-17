@@ -27,7 +27,17 @@ import {
 import { getAccount } from '../user/usersActions';
 import Loading from '../components/Icon/Loading';
 
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+import {
+  XYPlot,
+  LineSeries,
+  XAxis,
+  YAxis,
+  VerticalGridLines,
+  HorizontalGridLines,
+  RadialChart,
+  Hint
+} from 'react-vis';
+
 
 @withRouter
 @connect(
@@ -134,21 +144,31 @@ class UserPerformance extends React.Component {
     const actions = usersAccountHistory[user.name] || [];
 
     return (
-      <XYPlot
-  width={300}
-  height={300}>
-  <HorizontalGridLines />
-  <LineSeries
-    data={[
-      {x: 1, y: 10},
-      {x: 2, y: 5},
-      {x: 3, y: 15}
-    ]}/>
-  <XAxis />
-  <YAxis />
-</XYPlot>
+      <RadialChart
+        className={'donut-chart-example'}
+        innerRadius={100}
+        radius={140}
+        getAngle={d => d.theta}
+        data={[
+          {theta: 2, className: 'custom-class'},
+          {theta: 6},
+          {theta: 2},
+          {theta: 3},
+          {theta: 1}
+        ]}
+        onValueMouseOver={v => this.setState({value: v})}
+        onSeriesMouseOut={v => this.setState({value: false})}
+        width={300}
+        height={300}>
+        {value && <Hint value={value}/>}
+      </RadialChart>
     );
   }
 }
+
+
+
+
+
 
 export default UserPerformance;
