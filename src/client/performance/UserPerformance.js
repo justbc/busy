@@ -38,6 +38,8 @@ import {
   Hint
 } from 'react-vis';
 
+import React, {Component} from 'react';
+
 
 @withRouter
 @connect(
@@ -133,16 +135,13 @@ class UserPerformance extends React.Component {
     });
   }
 
-  render() {
-    const {
-      user,
-      usersAccountHistory,
-      usersAccountHistoryLoading,
-      loadingGlobalProperties,
-      isCurrentUser,
-    } = this.props;
-    const actions = usersAccountHistory[user.name] || [];
 
+export default class SimpleRadialChart extends Component {
+  state = {
+    value: false
+  }
+  render() {
+    const {value} = this.state;
     return (
       <RadialChart
         className={'donut-chart-example'}
@@ -165,9 +164,6 @@ class UserPerformance extends React.Component {
     );
   }
 }
-
-
-
 
 
 
