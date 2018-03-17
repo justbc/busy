@@ -14,6 +14,7 @@ import requiresLogin from '../../auth/requiresLogin';
 import withEditor from './withEditor';
 import EditorInput from './EditorInput';
 import Body, { remarkable } from '../Story/Body';
+
 import './Editor.less';
 
 @injectIntl
@@ -186,6 +187,19 @@ class Editor extends React.Component {
     return (
       <Form className="Editor" layout="vertical" onSubmit={this.handleSubmit}>
         <Helmet>
+         <XYPlot
+  width={300}
+  height={300}>
+  <HorizontalGridLines />
+  <LineSeries
+    data={[
+      {x: 1, y: 10},
+      {x: 2, y: 5},
+      {x: 3, y: 15}
+    ]}/>
+  <XAxis />
+  <YAxis />
+</XYPlot>
           <title>
             {intl.formatMessage({ id: 'write_post', defaultMessage: 'Write post' })} - Busy
           </title>
