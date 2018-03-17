@@ -27,7 +27,17 @@ import {
 import { getAccount } from '../user/usersActions';
 import Loading from '../components/Icon/Loading';
 
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+import {
+  XYPlot,
+  LineSeries,
+  XAxis,
+  YAxis,
+  VerticalGridLines,
+  HorizontalGridLines,
+  RadialChart,
+  Hint
+} from 'react-vis';
+
 
 import React, {Component} from 'react';
 
@@ -154,6 +164,13 @@ class UserPerformance extends React.Component {
   <XAxis />
   <YAxis />
 </XYPlot>
+      </br>
+      
+      <RadialChart
+  data={[{angle: 1}, {angle: 5}, {angle: 2}]}
+  width={300}
+  height={300} /> 
+
     );
   }
 }
