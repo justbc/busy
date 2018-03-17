@@ -27,19 +27,7 @@ import {
 import { getAccount } from '../user/usersActions';
 import Loading from '../components/Icon/Loading';
 
-import {
-  XYPlot,
-  LineSeries,
-  XAxis,
-  YAxis,
-  VerticalGridLines,
-  HorizontalGridLines,
-  RadialChart,
-  Hint
-} from 'react-vis';
-
-import React, {Component} from 'react';
-
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 
 @withRouter
 @connect(
@@ -135,34 +123,38 @@ class UserPerformance extends React.Component {
     });
   }
 
-
-export default class UserPerformance extends Component {
-  state = {
-    value: false
-  }
   render() {
-    const {value} = this.state;
+    const {
+      user,
+      usersAccountHistory,
+      usersAccountHistoryLoading,
+      loadingGlobalProperties,
+      isCurrentUser,
+    } = this.props;
+    const actions = usersAccountHistory[user.name] || [];
+
     return (
-      <RadialChart
-        className={'donut-chart-example'}
-        innerRadius={100}
-        radius={140}
-        getAngle={d => d.theta}
-        data={[
-          {theta: 2, className: 'custom-class'},
-          {theta: 6},
-          {theta: 2},
-          {theta: 3},
-          {theta: 1}
-        ]}
-        onValueMouseOver={v => this.setState({value: v})}
-        onSeriesMouseOut={v => this.setState({value: false})}
-        width={300}
-        height={300}>
-        {value && <Hint value={value}/>}
-      </RadialChart>
+      <h3> User Performance </h3>
+      <XYPlot
+  width={300}
+  height={300}>
+  <HorizontalGridLines />
+  <LineSeries
+    data={[
+      {x: 1, y: 100},
+      {x: 2, y: 95},
+      {x: 3, y: 90},
+      {x: 4, y: 85},
+      {x: 5, y: 80},
+      {x: 6, y: 85},
+      {x: 7, y: 90},
+      
+    ]}/>
+  <XAxis />
+  <YAxis />
+</XYPlot>
     );
   }
 }
 
-
+export default UserPerformance;
