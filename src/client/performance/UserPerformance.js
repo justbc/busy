@@ -136,7 +136,7 @@ class UserPerformance extends React.Component {
   }
 
 
-export default class SimpleRadialChart extends Component {
+export default class UserPerformance extends Component {
   state = {
     value: false
   }
@@ -166,5 +166,3 @@ export default class SimpleRadialChart extends Component {
 }
 
 
-
-export default UserPerformance;
