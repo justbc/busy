@@ -5,6 +5,7 @@ import Drafts from '../client/post/Write/Drafts';
 import Replies from '../client/replies/Replies';
 import Activity from '../client/activity/Activity';
 import Wallet from '../client/wallet/Wallet';
+import Performance from '../client/performance/Performance';
 import Editor from '../client/post/Write/Write';
 import Settings from '../client/settings/Settings';
 import ProfileSettings from '../client/settings/ProfileSettings';
@@ -18,6 +19,7 @@ import UserReblogs from '../client/user/UserReblogs';
 import UserFeed from '../client/user/UserFeed';
 import UserWallet from '../client/user/UserWallet';
 import UserActivity from '../client/activity/UserActivity';
+import UserPerformance from '../client/activity/UserPerformance';
 import Post from '../client/post/Post';
 import Page from '../client/feed/Page';
 import Discover from '../client/discover/Discover';
@@ -53,6 +55,11 @@ const routes = [
         path: '/wallet',
         exact: true,
         component: Wallet,
+      },
+      {
+        path: '/performance',
+        exact: true,
+        component: Performance,
       },
       {
         path: '/editor',
@@ -122,6 +129,11 @@ const routes = [
             path: '/@:name/activity',
             exact: true,
             component: UserActivity,
+          },
+          {
+            path: '/@:name/performance',
+            exact: true,
+            component: UserPerformance,
           },
         ],
       },
