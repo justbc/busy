@@ -5,7 +5,7 @@ import { injectIntl } from 'react-intl';
 import Affix from '../components/Utils/Affix';
 import LeftSidebar from '../app/Sidebar/LeftSidebar';
 import RightSidebar from '../app/Sidebar/RightSidebar';
-import UserActivity from './UserPerformance';
+import UserPerformance from './UserPerformance';
 import requiresLogin from '../auth/requiresLogin';
 
 const Performance = ({ intl }) => (
