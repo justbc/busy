@@ -26,7 +26,6 @@ import {
 } from '../wallet/walletActions';
 import { getAccount } from '../user/usersActions';
 import Loading from '../components/Icon/Loading';
-# import UserActivityActions from './UserActivityActions';
 
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 
