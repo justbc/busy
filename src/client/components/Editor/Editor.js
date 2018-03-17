@@ -188,8 +188,7 @@ class Editor extends React.Component {
 
     return (
       <Form className="Editor" layout="vertical" onSubmit={this.handleSubmit}>
-        <Helmet>
-         <XYPlot
+      <XYPlot
   width={300}
   height={300}>
   <HorizontalGridLines />
@@ -202,6 +201,7 @@ class Editor extends React.Component {
   <XAxis />
   <YAxis />
 </XYPlot>
+        <Helmet>
           <title>
             {intl.formatMessage({ id: 'write_post', defaultMessage: 'Write post' })} - Busy
           </title>
