@@ -39,8 +39,6 @@ import {
 } from 'react-vis';
 
 
-import React, {Component} from 'react';
-
 @withRouter
 @connect(
   (state, ownProps) => ({
