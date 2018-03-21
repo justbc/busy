@@ -9,7 +9,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const configUtils = require('./configUtils');
-const Sass2LessPlugin = require("less-plugin-sass2less");
 
 const DEFAULTS = {
   isDevelopment: process.env.NODE_ENV !== 'production',
@@ -150,11 +149,7 @@ function makeStyleLoaders(options) {
           },
           POSTCSS_LOADER,
           {
-            loader: 'less-loader', options: {
-                    plugins: [
-                        new Sass2LessPlugin({ advanced: true })
-                    ]
-            }
+            loader: 'less-loader',
           },
         ],
       }),
