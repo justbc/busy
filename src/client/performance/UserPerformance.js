@@ -38,7 +38,7 @@ import {
   Hint
 } from 'react-vis';
 
-import '../../styles/react-vis.scss';
+import '../styles/react-vis.scss';
 
 @withRouter
 @connect(
