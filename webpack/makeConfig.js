@@ -152,7 +152,7 @@ function makeStyleLoaders(options) {
           {
             loader: 'less-loader', options: {
                     plugins: [
-                        new Sass2LessPlugin()
+                        new Sass2LessPlugin({ advanced: true })
                     ]
             }
           },
